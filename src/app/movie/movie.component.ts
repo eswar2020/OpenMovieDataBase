@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OmdbService } from '../omdb.service';
 
 @Component({
   selector: 'app-movie',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie.component.css']
 })
 export class MovieComponent implements OnInit {
-
-  constructor() { }
+movie;
+  constructor(private omdb:OmdbService) { }
 
   ngOnInit() {
   }
 
+    getMovieData() {
+     this.omdb.getMovie().subscribe(
+       response => this.movie = response
+     )
+    }
 }
