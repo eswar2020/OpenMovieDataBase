@@ -1,0 +1,17 @@
+.movie-com {
+    padding-top: 50px;
+    padding-left: 300px;
+   
+}
+h1 {
+    color: brown;
+}
+.btn {
+    padding: 10px 24px;;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}

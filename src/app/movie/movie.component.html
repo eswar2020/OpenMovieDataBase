@@ -1,1 +1,24 @@
-<p>movie works!</p>
+<div class="movie-com">
+    <h1> {{title}} </h1>
+
+<div>
+    <button (click) ="getMovieData()" class="btn">get data</button> <br>
+    {{movie | json}}
+
+   
+</div>
+<div>
+    <input [(ngModel)] = 'movieTitle' placeholder="search here--">
+    <button (click) = "searchMovieData(movieTitle)" class="btn">searchdata</button>
+
+        <ul>
+            <li>
+             Title   {{result.Title}} <br>
+                
+             Rated    {{result.Rated}}     <br>
+             Released   {{result.Released}}   <br>
+            </li>
+        </ul>
+
+</div>
+</div>
