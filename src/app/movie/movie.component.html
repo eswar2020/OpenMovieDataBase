@@ -1,25 +1,29 @@
 <div class="movie-com">
   <h1> {{title}} </h1>
+</div>
 
-  <div>
-    <button (click)="getMovieData()" class="btn">get data</button> <br>
+<div class="movie-search">
+
+  <input [(ngModel)]='movieTitle' placeholder="search here--">
+  <button (click)="searchMovieData(movieTitle)" class="btn">searchdata</button>
+
+
+</div>
+
+<div *ngIf="result" class="result">
+
+  <img [src]=" result.Poster" alt="poster" srcset="">
+  <h1> Title: <span> {{result.Title}}</span> </h1>
+  <h2> Rated: <span>{{result.Rated}} </span> </h2>
+  <h2> Released: <span>{{result.Released}} </span> </h2>
+  <h2> Genre: <span>{{result.Genre}} </span> </h2>
+</div>
+
+
+<div class="rawdata">
+  <button (click)="getMovieData()" class="btn">get data</button> <br>
+  <span>
     {{movie | json}}
+  </span>
 
-
-  </div>
-  <div>
-    <input [(ngModel)]='movieTitle' placeholder="search here--">
-    <button (click)="searchMovieData(movieTitle)" class="btn">searchdata</button>
-  </div>
-  <div *ngIf="result">
-
-    <img [src]=" result.Poster" alt="poster" srcset="">
-    <h1> Title: <span> {{result.Title}}</span> </h1>
-    <h2> Rated: <span>{{result.Rated}} </span> </h2>
-    <h2> Released: <span>{{result.Released}} </span> </h2>
-    <h2> Genre: <span>{{result.Genre}} </span> </h2>
-
-
-
-  </div>
 </div>

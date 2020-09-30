@@ -1,17 +1,36 @@
 .movie-com {
-    padding-top: 50px;
-    padding-left: 300px;
-   
+  text-align: center;
+
 }
+
 h1 {
-    color: brown;
+  color: brown;
 }
+
 .btn {
-    padding: 10px 24px;;
-    background-color: blueviolet;
-    color: white;
-    text-align: center;
+  padding: 10px 24px;
+  ;
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
   border-radius: 5px;
+}
+
+.movie-search,
+.result {
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+
+.rawdata>span {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 200px;
+  width: 150px;
+
 }
